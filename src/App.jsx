@@ -5,7 +5,7 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Home from "./pages/Home";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-import Explore from "./pages/EXplore";
+import Explore from "./pages/Explore";
 import NotFound from "./pages/NotFound";
 
 function App() {
