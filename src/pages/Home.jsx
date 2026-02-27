@@ -6,7 +6,7 @@ import HomeBottomImg from "../assets/images/beans-image.png";
 import SearchIcon from "../assets/icons/search_google.svg";
 import ItemCardRender from "../components/CategoryComponent/CategoryCardRender.jsx";
 import ChefSpecialRender from "../components/ChefSpecialComponent/ChefSpecialRender.jsx";
-import Footer from "../components/Footer";
+import Footer from "../components/footer";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
