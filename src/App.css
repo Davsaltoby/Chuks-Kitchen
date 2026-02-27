@@ -1,0 +1,30 @@
+.chuks-logo {
+  font-family: "Island Moments", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.footer-paragraph,
+.quick-link,
+.contact-us {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.footer-list-align {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-list-align,
+.footer-copyright {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* a {
+  color: #1e88e5;
+} */
