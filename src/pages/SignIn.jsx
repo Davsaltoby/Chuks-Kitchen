@@ -10,7 +10,7 @@ import MailIcon from "../assets/icons/mail.svg";
 import VisibilityIcon from "../assets/icons/visibility_off.svg";
 import lockIcon from "../assets/icons/lock.svg";
 import { Link, useNavigate } from "react-router-dom";
-import InputComponent from "../components/FormComponents/inputComponent";
+import InputComponent from "../components/FormComponents/InputComponent";
 
 const SignIn = () => {
   const navigate = useNavigate();
