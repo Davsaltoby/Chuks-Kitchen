@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Nav from "../components/Nav";
-import Footer from "../components/Footer";
+import Footer from "../components/footer";
 import CategoryTitleRender from "../components/MenuTitleList/TitleRender";
 import Product from "../components/OrderCardComponent/Categories/products";
 import ExploreHero from "../assets/images/exploreHero.png";
