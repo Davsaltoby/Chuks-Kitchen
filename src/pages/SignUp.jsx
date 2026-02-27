@@ -10,7 +10,7 @@ import MailIcon from "../assets/icons/mail.svg";
 import VisibilityClosed from "../assets/icons/visibility_off.svg";
 import VisibilityOpen from "../assets/icons/visibility_open.png";
 import lockIcon from "../assets/icons/lock.svg";
-import InputComponent from "../components/FormComponents/inputComponent";
+import InputComponent from "../components/FormComponents/InputComponent";
 import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
