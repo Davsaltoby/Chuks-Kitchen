@@ -42,7 +42,7 @@ const Home = () => {
 
         {/* Search Div */}
 
-        <div className="absolute w-[90vw] lg:w-[80vw] bottom-[-15px] lg:bottom-[-30px] lg:left-[100px] left-[20px] z-20 bg-white flex items-center px-4 gap-2 lg:gap-4 rounded-[8px] h-[38px] lg:h-14 lg:py-8 shadow shadow-lg">
+        <div className="absolute w-[88vw] lg:w-[80vw] bottom-[-25px] lg:bottom-[-30px] lg:left-[100px] left-[25px] z-20 bg-white flex items-center px-4 gap-2 lg:gap-4 rounded-[8px] h-[50px] lg:h-14 lg:py-8 shadow shadow-lg">
           <img className="w-10" src={SearchIcon} alt="Search Icon" />
           <input
             className="w-full py-2 focus:outline-none placeholder:text-[#1F2937] font-semibold lg:text-[24px]"
