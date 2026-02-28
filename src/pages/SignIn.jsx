@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../components/footer";
 import Logo from "../components/logo";
 import Button from "../components/Button";
@@ -7,16 +7,24 @@ import GoogleIcon from "../assets/icons/Social-media-login (1).png";
 import AppleIcon from "../assets/icons/Facebook.png";
 import IntroImg from "../assets/images/Onboarding/Rectangle 1.png";
 import MailIcon from "../assets/icons/mail.svg";
-import VisibilityIcon from "../assets/icons/visibility_off.svg";
+import VisibilityIconClose from "../assets/icons/visibility_off.svg";
+import VisibilityIconOpen from "../assets/icons/visibility_open.png";
 import lockIcon from "../assets/icons/lock.svg";
 import { Link, useNavigate } from "react-router-dom";
 import InputComponent from "../components/FormComponents/InputComponent";
 
 const SignIn = () => {
   const navigate = useNavigate();
+
+  const [showPassword, setShowPassword] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate("/home");
+  };
+
+  const togglePassword = () => {
+    setShowPassword(!showPassword);
   };
   return (
     <main className="w-[90vw] mx-auto lg:w-full lg:bg-[#F3F4F6]">
@@ -55,10 +63,11 @@ const SignIn = () => {
               <InputComponent
                 label="Password"
                 icon={lockIcon}
-                icon2={VisibilityIcon}
-                type="password"
+                icon2={showPassword ? VisibilityIconOpen : VisibilityIconClose}
+                type={showPassword ? "text" : "password"}
                 placeholder="******"
-              ></InputComponent>
+                onClick={togglePassword}
+              />
 
               {/* Forgot password */}
 
@@ -72,7 +81,7 @@ const SignIn = () => {
               <Button
                 type="submit"
                 variant="secondary"
-                className="w-full text-[16px] py-[18px]"
+                className="w-full text-[16px] py-[14px]"
                 onClick={handleSubmit}
               >
                 Continue
@@ -83,6 +92,7 @@ const SignIn = () => {
               Or continue with
             </p>
             <Button
+              type="button"
               icon={GoogleIcon}
               variant="tertiary"
               className="w-full text-[14px] border-[1px]"

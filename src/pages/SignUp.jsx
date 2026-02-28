@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../components/footer";
 import Logo from "../components/logo";
 import Button from "../components/Button";
 import HeroImg from "../components/heroImg";
 import GoogleIcon from "../assets/icons/Social-media-login (1).png";
-import AppleIcon from "../assets/icons/Facebook.png";
+import FacebookIcon from "../assets/icons/Facebook.png";
 import IntroImg from "../assets/images/Onboarding/Rectangle 1.png";
 import MailIcon from "../assets/icons/mail.svg";
 import VisibilityClosed from "../assets/icons/visibility_off.svg";
@@ -14,9 +14,19 @@ import InputComponent from "../components/FormComponents/InputComponent";
 import { Link, useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const navigate = useNavigate();
   const handleSubmit = () => {
     navigate("/signin");
+  };
+
+  const handleShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const handleShowConfirmPassword = () => {
+    setShowConfirmPassword(!showConfirmPassword);
   };
   return (
     <div className="lg:w-full w-[90vw] mx-auto pt-6 pb-10 lg:py-0 lg:bg-[#F3F4F6]">
@@ -62,19 +72,21 @@ const SignUp = () => {
               <InputComponent
                 label="Password"
                 icon={lockIcon}
-                icon2={VisibilityClosed}
-                type="password"
+                icon2={showPassword ? VisibilityOpen : VisibilityClosed}
+                type={showPassword ? "text" : "password"}
                 placeholder="QWE123#"
+                onClick={handleShowPassword}
               ></InputComponent>
 
               {/* Confirm Password */}
 
               <InputComponent
-                type="password"
+                type={showConfirmPassword ? "text" : "password"}
                 icon={lockIcon}
-                icon2={VisibilityClosed}
+                icon2={showConfirmPassword ? VisibilityOpen : VisibilityClosed}
                 placeholder="QWE123#"
                 label="Confirm Password"
+                onClick={handleShowConfirmPassword}
               />
 
               {/* Agree to terms and condition */}
@@ -98,7 +110,7 @@ const SignUp = () => {
                 onClick={handleSubmit}
                 type="submit"
                 variant="secondary"
-                className="w-full text-[16px] py-[18px]"
+                className="w-full text-[16px] py-[14px]"
               >
                 Continue
               </Button>
@@ -115,7 +127,7 @@ const SignUp = () => {
               Continue with Google
             </Button>
             <Button
-              icon={AppleIcon}
+              icon={FacebookIcon}
               variant="tertiary"
               className="w-full text-[14px] border-[1px] mt-4"
             >

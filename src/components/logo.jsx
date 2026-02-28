@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Logo = ({ className = "" }) => {
   // const sizes = {
@@ -7,9 +8,12 @@ const Logo = ({ className = "" }) => {
   //   tertiary: `text-[24px]`,
   // };
   return (
-    <span className={`chuks-logo leading-none text-[#FF7A18] ${className}`}>
+    <NavLink
+      to="/home"
+      className={`chuks-logo leading-none text-[#FF7A18] ${className}`}
+    >
       Chuks Kitchen
-    </span>
+    </NavLink>
   );
 };
 
